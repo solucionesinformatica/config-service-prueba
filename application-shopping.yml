@@ -34,7 +34,7 @@ feign:
   hystrix:
     enabled: true
 management:
-  endpoint:
+  endpoints:
     web:
       exposure:
         include: "*"
