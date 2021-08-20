@@ -4,8 +4,8 @@ spring:
   boot:
       admin:
         client:
-          auto-registration: false
-          register-omce: false
+          auto-registration: true
+          register-once: true
   h2:
     console:
       enabled: true
