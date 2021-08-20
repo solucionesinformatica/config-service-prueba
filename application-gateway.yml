@@ -11,21 +11,21 @@ eureka:
 spring:
   cloud:
     gateway:
-      discovery:
-        enabled: true
-        locator:
-          lower-case-service-id: true
-          enabled: true
+ #     discovery:
+ #       enabled: true
+ #       locator:
+ #         lower-case-service-id: true
+ #         enabled: true
       routes:
         - id: customer-service
-          uri: lb://service-product
+          uri: http://localhost:8092
           predicates:
             - Path=/customers/**
         - id: product-service
-          uri: lb://shopping-service
+          uri: http://localhost:8091
           predicates:
             - Path=/products/**
         - id: shopping-service
-          uri: lb://customer-service
+          uri: http://localhost:8093
           predicates:
             - Path=/invoices/**
