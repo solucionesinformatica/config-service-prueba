@@ -20,6 +20,13 @@ spring:
         show_sql: true
         use_sql_comments: false
         format_sql: false
+  cloud:
+    gateway:
+      discovery:
+        enabled: true
+        locator:
+          lower-case-service-id: true
+          enabled: true
 
 #logging:
 #  pattern:
@@ -27,6 +34,8 @@ spring:
         
       
 eureka:
+  instance:
+    hostname: localhost
   client:
     serviceUrl:
       defaultZone: http://localhost:8099/eureka/
