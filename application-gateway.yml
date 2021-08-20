@@ -9,12 +9,6 @@ eureka:
       defaultZone: http://localhost:8099/eureka/
 
 spring:
-  spring:
-    boot:
-      admin:
-        client:
-          auto-registration: false
-          register-omce: false
   cloud:
     gateway:
       discovery:

@@ -1,11 +1,6 @@
 server:
   port: 8091
 spring:
-  boot:
-      admin:
-        client:
-          auto-registration: true
-          register-once: true
   h2:
     console:
       enabled: true
